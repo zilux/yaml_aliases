@@ -1,0 +1,18 @@
+---
+# See: https://spacelift.io/blog/yaml#yaml-vs-json
+# and
+# https://spacelift.io/blog/ansible-best-practices
+
+- hosts: "{{ group | default('nope') }}"
+
+  tasks:
+
+    - debug:
+        msg: 
+          - creds {{ creds }}
+          - Xcreds {{ Xcreds }}
+
+    - debug:
+        msg: grp {{ grp }} type is {{ scalars[0] | type_debug }}  {{ ansible_hostname }} {{ inventory_hostname }} {{ ansible_fqdn }}
+
+    - debug:      

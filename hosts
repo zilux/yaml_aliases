@@ -1,0 +1,5 @@
+[grpa]
+kihon ansible_host=kihon.qrom.nl
+
+[grpb]
+node1.qrom.nl
